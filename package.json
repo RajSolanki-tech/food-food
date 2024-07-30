@@ -1,0 +1,19 @@
+{
+  "name": "food-food",
+  "version": "1.0.0",
+  "description": "Food ordering App",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RajSolanki-tech/food-food.git"
+  },
+  "author": "Raj Solanki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RajSolanki-tech/food-food/issues"
+  },
+  "homepage": "https://github.com/RajSolanki-tech/food-food#readme"
+}
