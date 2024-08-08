@@ -4,6 +4,8 @@
   "description": "Food ordering App",
   "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,16 @@
   "bugs": {
     "url": "https://github.com/RajSolanki-tech/food-food/issues"
   },
-  "homepage": "https://github.com/RajSolanki-tech/food-food#readme"
+  "homepage": "https://github.com/RajSolanki-tech/food-food#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ]
 }
