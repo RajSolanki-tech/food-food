@@ -1,18 +1,28 @@
 import { useState } from "react";
 import logo from "../logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   return (
     <div className="header">
       <div className="logo-container">
-        <img src={logo} className="logo" alt="logo" />
+        <Link to={"/"}>
+          {" "}
+          <img src={logo} className="logo" alt="logo" />
+        </Link>
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Cart</li>
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/about"}>About Us</Link>
+          </li>
+          <li>
+            <Link to={"/cart"}>Cart</Link>
+          </li>
           <button
             className="login"
             onClick={() => {

@@ -7,6 +7,8 @@
 - - Nav Items
 - Body
 - - Search
+- - Restaurant Filter
+- - Reset button
 - - Restaurant Container
 -      - Restaurant Card
            - Img
