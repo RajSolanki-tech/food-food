@@ -46,10 +46,10 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex ">
+        <div className="search m-4 ml-16 p-4">
           <input
-            className="search-box"
+            className="border border-solid border-black rounded-md py-1 text-sm"
             type="text"
             value={searchText}
             onChange={(e) => {
@@ -57,6 +57,7 @@ const Body = () => {
             }}
           />
           <button
+            className="px-3 py-1.5 bg-blue-700 m-2 rounded-lg text-white font-medium text-sm"
             onClick={() => {
               console.log(searchText);
               const filteredRestaurant = listOfRestaurants.filter((res) =>
@@ -69,28 +70,30 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setFilteredRestaurant(filteredList);
-            console.log(filteredList);
-          }}
-        >
-          Top rated Restaurant
-        </button>
-        <button
-          className="reset-filter"
-          onClick={() => {
-            window.location.reload();
-          }}
-        >
-          Reset Filter
-        </button>
+        <div className="flex items-center">
+          <button
+            className="p-1 py-1.5 bg-blue-700 m-2 rounded-lg text-white font-medium text-sm"
+            onClick={() => {
+              const filteredList = listOfRestaurants.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setFilteredRestaurant(filteredList);
+              console.log(filteredList);
+            }}
+          >
+            Top Rated Restaurant
+          </button>
+          <button
+            className="px-3 py-1.5 bg-blue-700 m-2 rounded-lg text-white font-medium text-sm"
+            onClick={() => {
+              window.location.reload();
+            }}
+          >
+            Reset Filter
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="res-container flex flex-wrap justify-center">
         {filteredRestaurant.map((restaurant) => (
           <Link
             to={"/restaurants/" + restaurant.info.id}
