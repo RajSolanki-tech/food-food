@@ -8,7 +8,7 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
-  console.log("Body Rendered");
+  // console.log("Body Rendered");
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
@@ -19,14 +19,14 @@ const Body = () => {
     const data = await fetch(RESTAURANT_API);
 
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
 
     setListOfRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    // console.log(
+    //   json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    // );
     setFilteredRestaurant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -59,7 +59,7 @@ const Body = () => {
           <button
             className="px-3 py-1.5 bg-blue-700 m-2 rounded-lg text-white font-medium text-sm"
             onClick={() => {
-              console.log(searchText);
+              // console.log(searchText);
               const filteredRestaurant = listOfRestaurants.filter((res) =>
                 res?.info?.name.toLowerCase().includes(searchText.toLowerCase())
               );
@@ -78,7 +78,7 @@ const Body = () => {
                 (res) => res.info.avgRating > 4
               );
               setFilteredRestaurant(filteredList);
-              console.log(filteredList);
+              // console.log(filteredList);
             }}
           >
             Top Rated Restaurant

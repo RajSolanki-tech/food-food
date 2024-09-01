@@ -18,3 +18,12 @@
 - - Links
 - - Address
 - - Contact
+
+# Redux Toolkit
+
+- Install React-Redux(react-redux) & Redux Toolkit(@reduxjs/toolkit).
+- Build our Store
+- Connect our Store to our App
+- Slice(cartSlice)
+- Dispatch an Action
+- Selector(read the data) - because it is Subscribed to the Store.
